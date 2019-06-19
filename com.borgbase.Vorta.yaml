@@ -88,6 +88,5 @@ modules:
 
     sources:
       - type: git
-        url: https://github.com/Hofer-Julian/vorta.git
-        branch: Update-Appdata
-        sha256: 011a0190deaac439c1c22996e79950e73e722700
+        url: https://github.com/borgbase/vorta
+        sha256: 4590fadc91f585e913f500567155600c96249306
