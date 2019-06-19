@@ -1,6 +1,5 @@
 {
     "name": "openssh",
-    "config-opts": ["--without-pie"],
     "sources": [
         {
             "type": "archive",
