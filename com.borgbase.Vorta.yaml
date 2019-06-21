@@ -3,7 +3,7 @@ app-id: com.borgbase.Vorta
 runtime: org.kde.Platform
 runtime-version: '5.12'
 sdk: org.kde.Sdk
-branch: stable
+default-branch: stable
 
 command: vorta
 
@@ -88,4 +88,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/borgbase/vorta
-        sha256: 4590fadc91f585e913f500567155600c96249306
+        tag: v0.6.21
+        sha256: 850274d0cd70c772f22e1749314cf5f910af5c73
