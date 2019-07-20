@@ -88,5 +88,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/borgbase/vorta
-        tag: v0.6.21
-        sha256: 850274d0cd70c772f22e1749314cf5f910af5c73
+        sha256: 1bb780897cfb655118caa1ce5bb09c28ee916887
