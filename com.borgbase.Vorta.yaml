@@ -43,7 +43,6 @@ build-options:
 
 modules:
   - dependencies/pyqt5.json  
-  - dependencies/openssh.json
   - dependencies/libfuse.json
   - dependencies/python3-setuptools.json
   - dependencies/python3-setuptools_git.json
