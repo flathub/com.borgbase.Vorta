@@ -5,20 +5,17 @@
     "sdk": "org.kde.Sdk",
     "command": "vorta",
     "finish-args": [
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--share=ipc",
         "--socket=wayland",
         "--device=dri",
         "--share=network",
         "--filesystem=host",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--own-name=org.kde.StatusNotifierItem-2-1",
-        "--own-name=org.kde.StatusNotifierItem-4-1",
+        "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.DBus.*",
         "--talk-name=org.freedesktop.Flatpak.*",
         "--talk-name=org.freedesktop.secrets",
         "--socket=ssh-auth",
-        "--own-name=org.KDE.*",
         "--talk-name=org.freedesktop.Notifications"
     ],
     "build-options": {
