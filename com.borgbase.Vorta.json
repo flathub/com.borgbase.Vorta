@@ -51,7 +51,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/borgbase/vorta",
-                    "sha256": "787c36273e1e31d4a5e5866bda88929d1a292403"
+                    "tag": "v0.6.26"
                 }
             ]
         }
