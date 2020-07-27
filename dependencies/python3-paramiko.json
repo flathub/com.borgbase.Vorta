@@ -12,6 +12,11 @@
             "sources": [
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ed/69/c805067de1feedbb98c53174b0f2df44cc05e0e9ee73bb85eebc59e508c6/setuptools-41.0.0.zip",
+                    "sha256": "79d30254b6fe7a8e672e43cd85f13a9f3f2a50080bc81d851143e2219ef0dcb1"
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/8c/23/848298cccf8e40f5bbb59009b32848a4c38f4e7f3364297ab3c3e2e2cd14/wheel-0.34.2-py2.py3-none-any.whl",
                     "sha256": "df277cb51e61359aba502208d680f90c0493adec6f0e848af94948778aed386e"
                 },
