@@ -38,7 +38,6 @@
         "dependencies/python3-peewee.json",
         "dependencies/python3-psutil.json",
         "dependencies/python3-python-dateutil.json",
-        "dependencies/python3-qdarkstyle.json",
         "dependencies/python3-secretstorage.json",
         "dependencies/python3-pytest-runner.json",
         {
