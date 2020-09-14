@@ -11,6 +11,7 @@
         "--device=dri",
         "--share=network",
         "--filesystem=host",
+        "--filesystem=~/.var/app/",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.DBus.*",
         "--talk-name=org.freedesktop.Flatpak.*",
