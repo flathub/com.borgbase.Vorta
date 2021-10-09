@@ -1,7 +1,7 @@
 {
     "app-id": "com.borgbase.Vorta",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
     "command": "vorta",
     "finish-args": [
@@ -16,7 +16,7 @@
         "--talk-name=org.freedesktop.DBus.*",
         "--talk-name=org.freedesktop.Flatpak.*",
         "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.kde.kwalletd5",        
+        "--talk-name=org.kde.kwalletd5",
         "--system-talk-name=org.freedesktop.NetworkManager",
         "--socket=ssh-auth",
         "--talk-name=org.freedesktop.Notifications"
@@ -30,11 +30,191 @@
     },
     "modules": [
         "dependencies/pyqt5.json",
-        "dependencies/libfuse.json",
-        "dependencies/python3-setuptools_scm.json",
-        "dependencies/python3-setuptools_git.json",
-        "dependencies/python3-borgbackup.json",
-        "dependencies/python3-llfuse.json",
+        {
+            "name": "borg",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --find-links=. --prefix=/app setuptools_scm",
+                "pip3 install --no-index --find-links=. --prefix=/app borgbackup"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/54/85/514ba3ca2a022bddd68819f187ae826986051d130ec5b972076e4f58a9f3/setuptools_scm-3.2.0.tar.gz",
+                    "sha256": "52ab47715fa0fc7d8e6cd15168d1a69ba995feb1505131c3e814eb7087b57358",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "setuptools_scm",
+                        "versions": {
+                            "<": "3.3"
+                        }
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/11/c6/9e16df5a5526f7dd2ad17284928e36fc341305fe74c7ab06bb5960a5da94/setuptools-58.0.2.tar.gz",
+                    "sha256": "19e48d0270a86c996bf09e5282584d3c0adf407f37f0aa6e3c762a349ff41811",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "setuptools"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/4e/be/8139f127b4db2f79c8b117c80af56a3078cc4824b5b94250c7f81a70e03b/wheel-0.37.0.tar.gz",
+                    "sha256": "e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "wheel"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210/pyparsing-2.4.7.tar.gz",
+                    "sha256": "c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "wheel"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/df/86/aef78bab3afd461faecf9955a6501c4999933a48394e90f03cd512aad844/packaging-21.0.tar.gz",
+                    "sha256": "7dc96269f53a4ccec5c0670940a4281106dd0bb343f47b7471f779df49c2fbe7",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "packaging"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c9/a8/7ce46b3ea57895164774644164089b63e0172ac72046f5fbbba5f135d7bb/borgbackup-1.1.17.tar.gz",
+                    "sha256": "7ab924fc017b24929bedceba0dcce16d56f9868bf9b5050d2aae2eb080671674",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "borgbackup",
+                        "versions": {
+                            "<": "1.1.99"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "fusermout",
+            "config-opts": [
+                "MOUNT_FUSE_PATH=/app/bin"
+            ],
+            "post-install": [
+                "install fusermount-wrapper.sh /app/bin/fusermount"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz",
+                    "sha256": "d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 861,
+                        "url-template": "https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz",
+                        "versions": {
+                            "<": "3"
+                        }
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "dependencies/fuse-2.9.2-namespace-conflict-fix.patch"
+                },
+                {
+                    "type": "file",
+                    "path": "dependencies/fusermount-wrapper.sh"
+                }
+            ]
+        },
+        {
+            "name": "llfuse",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --find-links=. --prefix=/app llfuse"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b1/d4/44443fbaac6d5b878da99e7c0948ee93c7934fa3b00e48c5363823b583d0/llfuse-1.4.1.tar.gz",
+                    "sha256": "c29c79d96a5aeab51608cae12594a1bf83576d86232f97341c7f779d413a4ec9",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "llfuse",
+                        "versions": {
+                            "<": "1.5"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "python3-semantic_version",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"semantic_version\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d4/52/3be868c7ed1f408cb822bc92ce17ffe4e97d11c42caafce0589f05844dd0/semantic_version-2.8.5.tar.gz",
+                    "sha256": "d2cb2de0558762934679b9a104e82eca7af448c9f4974d1f3eeccff651df8a54"
+                }
+            ]
+        },
+        {
+            "name": "python3-setuptools-rust",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"setuptools-rust\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz",
+                    "sha256": "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d4/52/3be868c7ed1f408cb822bc92ce17ffe4e97d11c42caafce0589f05844dd0/semantic_version-2.8.5.tar.gz",
+                    "sha256": "d2cb2de0558762934679b9a104e82eca7af448c9f4974d1f3eeccff651df8a54"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/12/22/6ba3031e7cbd6eb002e13ffc7397e136df95813b6a2bd71ece52a8f89613/setuptools-rust-0.12.1.tar.gz",
+                    "sha256": "647009e924f0ae439c7f3e0141a184a69ad247ecb9044c511dabde232d3d570e"
+                }
+            ]
+        },
+        {
+            "name": "python3-cryptography",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cryptography==3.3.2\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0f/86/e19659527668d70be91d0369aeaa055b4eb396b0f387a4f92293a20035bd/pycparser-2.20.tar.gz",
+                    "sha256": "2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2e/92/87bb61538d7e60da8a7ec247dc048f7671afe17016cd0008b3b710012804/cffi-1.14.6.tar.gz",
+                    "sha256": "c9a875ce9d7fe32887784274dd533c57909b7b1dcadcc128a2ac21331a9765dd"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d4/85/38715448253404186029c575d559879912eb8a1c5d16ad9f25d35f7c4f4c/cryptography-3.3.2.tar.gz",
+                    "sha256": "5a60d3780149e13b7a6ff7ad6526b38846354d11a15e21068e57073e29e19bed"
+                }
+            ]
+        },
         "dependencies/python3-appdirs.json",
         "dependencies/python3-apscheduler.json",
         "dependencies/python3-paramiko.json",
@@ -43,6 +223,7 @@
         "dependencies/python3-python-dateutil.json",
         "dependencies/python3-secretstorage.json",
         "dependencies/python3-pytest-runner.json",
+        "dependencies/python3-setuptools_git.json",
         {
             "name": "vorta",
             "buildsystem": "simple",
