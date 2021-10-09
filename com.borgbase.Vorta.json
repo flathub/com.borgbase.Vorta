@@ -228,7 +228,9 @@
             "name": "vorta",
             "buildsystem": "simple",
             "build-commands": [
-                "make flatpak-install"
+                "make flatpak-install",
+                // Until https://github.com/hughsie/appstream-glib/issues/271 is resolved
+                "rm -rf /app/usr/"
             ],
             "sources": [
                 {
