@@ -14,7 +14,7 @@
     ],
     "buildsystem": "simple",
     "build-commands": [
-        "PY_VER=python$(python3 -c 'import sys; print(sys.version[:3])') && python3 configure.py --confirm-license --assume-shared --destdir=/app/lib/${PY_VER}/site-packages --stubsdir=/app/lib/${PY_VER}/site-packages/PyQt5 --sipdir=/app/share/sip/PyQt5 --no-designer-plugin --no-qml-plugin --no-python-dbus --no-tools --enable=QtCore --enable=QtGui --enable=QtNetwork --enable=QtWidgets ${config_opt}",
+        "PY_VER=python$(python3 -c 'import sys; print(sys.version[:3])') && python3 configure.py --confirm-license --assume-shared --destdir=/app/lib/${PY_VER}/site-packages --stubsdir=/app/lib/${PY_VER}/site-packages/PyQt5 --sipdir=/app/share/sip/PyQt5 --no-designer-plugin --no-qml-plugin --no-tools --enable=QtDBus --enable=QtCore --enable=QtGui --enable=QtNetwork --enable=QtWidgets ${config_opt}",
         "make -j $FLATPAK_BUILDER_N_JOBS",
         "make install"
     ],
