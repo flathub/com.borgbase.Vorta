@@ -1,7 +1,7 @@
 {
     "app-id": "com.borgbase.Vorta",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
     "command": "vorta",
     "finish-args": [
@@ -16,7 +16,7 @@
         "--talk-name=org.freedesktop.DBus.*",
         "--talk-name=org.freedesktop.Flatpak.*",
         "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.kde.kwalletd5",        
+        "--talk-name=org.kde.kwalletd5",
         "--system-talk-name=org.freedesktop.NetworkManager",
         "--socket=ssh-auth",
         "--talk-name=org.freedesktop.Notifications"
