@@ -1,2 +1,4 @@
 .flatpak-builder/
 app/
+builddir/
+repo/
