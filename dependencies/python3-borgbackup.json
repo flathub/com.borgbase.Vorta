@@ -33,8 +33,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/c9/a8/7ce46b3ea57895164774644164089b63e0172ac72046f5fbbba5f135d7bb/borgbackup-1.1.17.tar.gz",
-            "sha256": "7ab924fc017b24929bedceba0dcce16d56f9868bf9b5050d2aae2eb080671674"
+            "url": "https://files.pythonhosted.org/packages/0f/e9/0b07aaff39e22eee9a983a48507bff46cf0d634e8a24e635e336cd7b3bce/borgbackup-1.2.0.tar.gz",
+            "sha256": "e39a5547902ef456101aa4c779fa66b345bda70d16788e8bd18e458f93af7f67"
         }
     ]
 }
