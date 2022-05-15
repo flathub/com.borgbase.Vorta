@@ -53,7 +53,13 @@
                 {
                     "type": "git",
                     "url": "https://github.com/borgbase/vorta",
-                    "tag": "v0.8.3"
+                    "tag": "v0.8.3",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/borgbase/vorta/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"vorta-\" + $version + \".tar.gz\") | .browser_download_url"
+                    }
                 }
             ]
         }
