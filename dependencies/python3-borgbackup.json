@@ -2,7 +2,7 @@
     "name": "borg",
     "buildsystem": "simple",
     "build-commands": [
-        "install -D borg /app/bin"
+        "mv borg /app/bin"
     ],
     "sources": [
         {
@@ -10,7 +10,7 @@
             "only-arches": [
                 "aarch64"
             ],
-            "dest": "borg",
+            "dest-filename": "borg",
             "url": "https://borg.bauerj.eu/bin/borg-1.2.0-arm64",
             "sha256": "5d18bc384273edbd8a4b6d18104685651fb42d5f07bdf518ef2ec3641269c95d"
         },
@@ -19,9 +19,9 @@
             "only-arches": [
                 "x86_64"
             ],
-            "dest": "borg",
+            "dest-filename": "borg",
             "url": "https://github.com/borgbackup/borg/releases/download/1.2.0/borg-linux64",
-            "sha256": "83c3fb8645379ec308192fa713df87044892639495722077e07aa779b310239e"
+            "sha256": "df271a523434a445c783c1a0bc3dd599521d6a6a25acd2766e9a5577edb6018f"
         }
     ]
 }
