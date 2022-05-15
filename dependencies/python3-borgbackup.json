@@ -2,7 +2,7 @@
     "name": "borg",
     "buildsystem": "simple",
     "build-commands": [
-        "mv borg /app/bin"
+        "install -D -m 755 borg /app/bin"
     ],
     "sources": [
         {
