@@ -12,7 +12,7 @@
             ],
             "dest-filename": "borg",
             "url": "https://borg.bauerj.eu/bin/borg-1.2.0-arm64",
-            "sha256": "5d18bc384273edbd8a4b6d18104685651fb42d5f07bdf518ef2ec3641269c95d"
+            "sha256": "4f1491967e25bdef38ae80406d6d645cab3955fa6b06397015304a001b6f57e5"
         },
         {
             "type": "file",
