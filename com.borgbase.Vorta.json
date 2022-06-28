@@ -1,64 +1,67 @@
 {
-    "app-id": "com.borgbase.Vorta",
-    "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
-    "sdk": "org.kde.Sdk",
-    "command": "vorta",
-    "finish-args": [
-        "--socket=fallback-x11",
-        "--share=ipc",
-        "--socket=wayland",
-        "--device=all",
-        "--share=network",
-        "--filesystem=host",
-        "--filesystem=~/.var/app/",
-        "--own-name=org.kde.*",
-        "--talk-name=org.freedesktop.DBus.*",
-        "--talk-name=org.freedesktop.Flatpak.*",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.kde.kwalletd5",
-        "--system-talk-name=org.freedesktop.NetworkManager",
-        "--socket=ssh-auth",
-        "--talk-name=org.freedesktop.Notifications"
-    ],
-    "build-options": {
-        "env": {
-            "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions",
-            "MOUNT_FUSE_PATH": "../tmp/",
-            "V": "1"
-        }
-    },
-    "modules": [
-        "dependencies/pyqt5.json",
-        "dependencies/libfuse.json",
-        "dependencies/python3-setuptools_scm.json",
-        "dependencies/python3-borgbackup.json",
-        "dependencies/python3-appdirs.json",
-        "dependencies/python3-apscheduler.json",
-        "dependencies/python3-paramiko.json",
-        "dependencies/python3-peewee.json",
-        "dependencies/python3-psutil.json",
-        "dependencies/python3-python-dateutil.json",
-        "dependencies/python3-secretstorage.json",
-        "dependencies/python3-pytest-runner.json",
+  "app-id": "com.borgbase.Vorta",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "5.15-21.08",
+  "sdk": "org.kde.Sdk",
+
+  "base": "com.riverbankcomputing.PyQt.BaseApp",
+  "base-version": "5.15-21.08",
+  "cleanup-commands": ["/app/cleanup-BaseApp.sh"],
+
+  "command": "vorta",
+  "finish-args": [
+    "--socket=fallback-x11",
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=all",
+    "--share=network",
+    "--filesystem=host",
+    "--filesystem=~/.var/app/",
+    "--own-name=org.kde.*",
+    "--talk-name=org.freedesktop.DBus.*",
+    "--talk-name=org.freedesktop.Flatpak.*",
+    "--talk-name=org.freedesktop.secrets",
+    "--talk-name=org.kde.kwalletd5",
+    "--system-talk-name=org.freedesktop.NetworkManager",
+    "--socket=ssh-auth",
+    "--talk-name=org.freedesktop.Notifications"
+  ],
+  "build-options": {
+    "env": {
+      "BASEAPP_REMOVE_WEBENGINE": "1",
+      "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions",
+      "MOUNT_FUSE_PATH": "../tmp/",
+      "V": "1"
+    }
+  },
+  "modules": [
+    "dependencies/libfuse.json",
+    "dependencies/python3-setuptools_scm.json",
+    "dependencies/python3-borgbackup.json",
+    "dependencies/python3-appdirs.json",
+    "dependencies/python3-apscheduler.json",
+    "dependencies/python3-paramiko.json",
+    "dependencies/python3-peewee.json",
+    "dependencies/python3-psutil.json",
+    "dependencies/python3-python-dateutil.json",
+    "dependencies/python3-secretstorage.json",
+    "dependencies/python3-pytest-runner.json",
+    {
+      "name": "vorta",
+      "buildsystem": "simple",
+      "build-commands": ["make flatpak-install"],
+      "sources": [
         {
-            "name": "vorta",
-            "buildsystem": "simple",
-            "build-commands": [
-                "make flatpak-install"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/borgbase/vorta",
-                    "tag": "v0.8.7",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
-                    },
-                    "commit": "e53aa966fc07fec828a228a59b36cdd79bfce1f9"
-                }
-            ]
+          "type": "git",
+          "url": "https://github.com/borgbase/vorta",
+          "tag": "v0.8.7",
+          "x-checker-data": {
+            "type": "git",
+            "tag-pattern": "^v([\\d.]+)$"
+          },
+          "commit": "e53aa966fc07fec828a228a59b36cdd79bfce1f9"
         }
-    ]
+      ]
+    }
+  ]
 }
