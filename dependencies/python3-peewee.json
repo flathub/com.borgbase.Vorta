@@ -2,13 +2,13 @@
     "name": "python3-peewee",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} peewee"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"peewee\" --no-build-isolation"
     ],
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/90/58/04bc705057694cac14c5c9a00dc83a80aafa1de27785227d3ee245cd4165/peewee-3.11.2.tar.gz",
-            "sha256": "f3f5c80c51b632d031f60454accadd84f166453a471bff63093ca674973f2a4e"
+            "url": "https://files.pythonhosted.org/packages/d4/22/b9d912a9611e8fd3f25ce040aa683c1dabbae7404e77db0f6a511363a112/peewee-3.15.0.tar.gz",
+            "sha256": "48eac70be812ac84daa5400fb8e7b545e0c83adcfa05c8e2a8612f9ced4da495"
         }
     ]
 }

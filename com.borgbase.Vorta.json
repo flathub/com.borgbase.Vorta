@@ -36,7 +36,7 @@
   },
   "modules": [
     "dependencies/libfuse.json",
-    "dependencies/python3-borgbackup.json",
+    "dependencies/borgbackup.json",
     "dependencies/python3-appdirs.json",
     "dependencies/python3-paramiko.json",
     "dependencies/python3-peewee.json",
