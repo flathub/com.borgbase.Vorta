@@ -87,8 +87,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/04/e5/39ec73dd4a8769d6759b8d6c60a1b2c9337f585407c2ae8bfb8ccb734278/paramiko-2.11.0-py2.py3-none-any.whl",
-            "sha256": "655f25dc8baf763277b933dfcea101d636581df8d6b9774d1fb653426b72c270",
+            "url": "https://files.pythonhosted.org/packages/26/df/e34ace16dcb337a2a2d3dc71d8658b7f20dedc9623933d34aad29c388dcb/paramiko-2.11.1-py2.py3-none-any.whl",
+            "sha256": "d9951c09e159d12fb0d69d6f45821d5e831bb44f51c613db59c304fdab13a65c",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "paramiko",
