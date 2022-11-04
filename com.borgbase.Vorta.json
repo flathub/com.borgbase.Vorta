@@ -1,10 +1,10 @@
 {
-    "app-id": "com.borgbase.Vorta",
+    "id": "com.borgbase.Vorta",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "5.15-21.08",
+    "base-version": "5.15-22.08",
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
     ],

@@ -1,7 +1,11 @@
 {
-    "name": "fusermout",
-    "config-opts": [
-        "MOUNT_FUSE_PATH=/app/bin"
+    "name": "libfuse",
+    "config-opts" : [
+        "UDEV_RULES_PATH=/app/etc/udev/rules.d",
+        "INIT_D_PATH=/app/etc/init.d"
+    ],
+    "cleanup" : [
+        "/bin/ulockmgr_server"
     ],
     "post-install": [
         "install fusermount-wrapper.sh /app/bin/fusermount"
@@ -27,6 +31,10 @@
         {
             "type": "file",
             "path": "fusermount-wrapper.sh"
+        },
+        {
+            "type" : "patch",
+            "path" : "fuse-2.9.2-closefrom.patch"
         }
     ]
 }
