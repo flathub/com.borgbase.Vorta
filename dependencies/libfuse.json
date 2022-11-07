@@ -1,40 +1,26 @@
 {
     "name": "libfuse",
-    "config-opts" : [
-        "UDEV_RULES_PATH=/app/etc/udev/rules.d",
-        "INIT_D_PATH=/app/etc/init.d"
-    ],
-    "cleanup" : [
-        "/bin/ulockmgr_server"
-    ],
-    "post-install": [
-        "install fusermount-wrapper.sh /app/bin/fusermount"
+    "buildsystem": "meson",
+    "config-opts": [
+        "-Dexamples=false",
+        "-Duseroot=false",
+        "-Dtests=false",
+        "-Dudevrulesdir=/tmp/",
+        "-Dinitscriptdir="
     ],
     "sources": [
         {
             "type": "archive",
-            "url": "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz",
-            "sha256": "d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5",
+            "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.12.0/fuse-3.12.0.tar.xz",
+            "sha256": "33b8a92d6f7a88e6a889f0009206933482f48f3eb85d88cf09ef551313ac7373",
             "x-checker-data": {
                 "type": "anitya",
                 "project-id": 861,
-                "url-template": "https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz",
+                "url-template": "https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.xz",
                 "versions": {
-                    "<": "3"
+                    "<": "4.0"
                 }
             }
-        },
-        {
-            "type": "patch",
-            "path": "fuse-2.9.2-namespace-conflict-fix.patch"
-        },
-        {
-            "type": "file",
-            "path": "fusermount-wrapper.sh"
-        },
-        {
-            "type" : "patch",
-            "path" : "fuse-2.9.2-closefrom.patch"
         }
     ]
 }
