@@ -11,8 +11,8 @@
                 "aarch64"
             ],
             "dest-filename": "borg",
-            "url": "https://borg.bauerj.eu/bin/borg-1.2.0-arm64",
-            "sha256": "4f1491967e25bdef38ae80406d6d645cab3955fa6b06397015304a001b6f57e5"
+            "url": "https://borg.bauerj.eu/bin/borg-1.2.3-arm64",
+            "sha256": "e405585ce99ddac793e211975df832fd51295acee82ed9b6fad8ea27f70fcd0c"
         },
         {
             "type": "file",
@@ -20,8 +20,8 @@
                 "x86_64"
             ],
             "dest-filename": "borg",
-            "url": "https://github.com/borgbackup/borg/releases/download/1.2.0/borg-linux64",
-            "sha256": "df271a523434a445c783c1a0bc3dd599521d6a6a25acd2766e9a5577edb6018f"
+            "url": "https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64",
+            "sha256": "107e02fdcc069f7125d3e20a5c137f7b6e8569d7991dcc6473b72ff9fb955aa4"
         }
     ]
 }
