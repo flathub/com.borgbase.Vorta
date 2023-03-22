@@ -1,10 +1,10 @@
 {
     "app-id": "com.borgbase.Vorta",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "5.15-21.08",
+    "base-version": "5.15-22.08",
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
     ],
@@ -26,16 +26,17 @@
         "--socket=ssh-auth",
         "--talk-name=org.freedesktop.Notifications"
     ],
+
     "build-options": {
         "env": {
-            "BASEAPP_REMOVE_WEBENGINE": "1",
-            "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions",
-            "MOUNT_FUSE_PATH": "../tmp/",
-            "V": "1"
+            "BASEAPP_REMOVE_WEBENGINE": "1"
         }
     },
     "modules": [
         "dependencies/libfuse.json",
+        "dependencies/host-command-wrapper.json",
+        "dependencies/python3-pkgconfig.json",
+        "dependencies/pyfuse3.json",
         "dependencies/borgbackup.json",
         "dependencies/python3-appdirs.json",
         "dependencies/python3-paramiko.json",
