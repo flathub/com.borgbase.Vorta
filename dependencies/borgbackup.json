@@ -1,36 +1,28 @@
 {
-    "name": "borg",
+    "name": "python3-borgbackup",
     "buildsystem": "simple",
     "build-commands": [
-        "install -D -m 755 borg /app/bin"
+        "pip3 install --use-deprecated=legacy-resolver --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"borgbackup\" --no-build-isolation"
     ],
     "sources": [
         {
             "type": "file",
-            "only-arches": [
-                "aarch64"
-            ],
-            "dest-filename": "borg",
-            "url": "https://borg.bauerj.eu/bin/borg-1.2.3-arm64",
-            "sha256": "e405585ce99ddac793e211975df832fd51295acee82ed9b6fad8ea27f70fcd0c"
+            "url": "https://files.pythonhosted.org/packages/e6/a5/69a9ddce8ae769e1bf4d1f1e93459238f473bad770d4dddba108db91971c/borgbackup-1.2.3.tar.gz",
+            "sha256": "e32418f8633c96fa9681352a56eb63b98e294203472c114a5242709d36966785",
+            "x-checker-data": {
+                "type": "pypi",
+                "name": "borgbackup"
+            }
         },
         {
             "type": "file",
-            "only-arches": [
-                "x86_64"
-            ],
-            "dest-filename": "borg",
-            "url": "https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64",
-            "sha512": "75dfd1cb8f6844a669d9024deb8cf75131ed383603f9de71f9e4bcbbb9e97f92265a68ca43793646b71c35e265300695621502a68c33a3bd98f170da19a6f81a",
-            "x-checker-data": {
-                "type": "json",
-                "versions": {
-                    "<": "2"
-                },
-                "url": "https://api.github.com/repos/borgbackup/borg/releases/latest",
-                "version-query": ".tag_name",
-                "url-query": ".assets[] | select(.name==\"borg-linux64\") | .browser_download_url"
-            }
+            "url": "https://files.pythonhosted.org/packages/22/44/0829b19ac243211d1d2bd759999aa92196c546518b0be91de9cacc98122a/msgpack-1.0.4.tar.gz",
+            "sha256": "f5d869c18f030202eb412f08b28d2afeea553d6613aee89e200d7aca7ef01f5f"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/ed/35/a31aed2993e398f6b09a790a181a7927eb14610ee8bbf02dc14d31677f1c/packaging-23.0-py3-none-any.whl",
+            "sha256": "714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2"
         }
     ]
 }
