@@ -21,7 +21,16 @@
             ],
             "dest-filename": "borg",
             "url": "https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64",
-            "sha256": "107e02fdcc069f7125d3e20a5c137f7b6e8569d7991dcc6473b72ff9fb955aa4"
+            "sha512": "75dfd1cb8f6844a669d9024deb8cf75131ed383603f9de71f9e4bcbbb9e97f92265a68ca43793646b71c35e265300695621502a68c33a3bd98f170da19a6f81a",
+            "x-checker-data": {
+                "type": "json",
+                "versions": {
+                    "<": "2"
+                },
+                "url": "https://api.github.com/repos/borgbackup/borg/releases/latest",
+                "version-query": ".tag_name",
+                "url-query": ".assets[] | select(.name==\"borg-linux64\") | .browser_download_url"
+            }
         }
     ]
 }
