@@ -37,7 +37,7 @@
         "dependencies/python3-pkgconfig.json",
         "dependencies/pyfuse3.json",
         "dependencies/borgbackup.json",
-        "dependencies/python3-appdirs.json",
+        "dependencies/python3-platformdirs.json",
         "dependencies/python3-paramiko.json",
         "dependencies/python3-peewee.json",
         "dependencies/python3-psutil.json",
