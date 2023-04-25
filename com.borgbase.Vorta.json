@@ -59,7 +59,10 @@
                     "tag": "v0.8.12",
                     "x-checker-data": {
                         "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
+                        "tag-pattern": "^v([\\d.]+)$",
+                        "versions": {
+                            "!=": "0.9.0"
+                        }
                     },
                     "commit": "850088553551ccc43e5f04d79e75c75ad689554d"
                 }
