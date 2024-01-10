@@ -1,14 +1,14 @@
-From 44dba23daff1ce3691c106a6ac7f88b57d97669d Mon Sep 17 00:00:00 2001
+From 8d6f98dc9ac59c796f977116f67c74435958a81c Mon Sep 17 00:00:00 2001
 From: Julian Hofer <julianhofer@gnome.org>
-Date: Wed, 10 Jan 2024 19:18:03 +0100
+Date: Wed, 10 Jan 2024 19:37:19 +0100
 Subject: [PATCH] Adapt appstream xml
 
 ---
- src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml | 1 +
- 1 file changed, 1 insertion(+)
+ .../metadata/com.borgbase.Vorta.appdata.xml   | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
 
 diff --git a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml b/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
-index 24b8785..1c40898 100644
+index 24b8785..a35ff98 100644
 --- a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
 +++ b/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
 @@ -1,6 +1,7 @@
@@ -19,6 +19,38 @@ index 24b8785..1c40898 100644
    <name>Vorta</name>
    <project_license>GPL-3.0</project_license>
    <metadata_license>CC0-1.0</metadata_license>
+@@ -40,6 +41,15 @@
+     </screenshot>
+   </screenshots>
+   <releases>
++    <release version="v0.9.1-beta2" date="2023-10-27" urgency="low">
++      <description>
++        <ul>
++          <li>Unit test improvements and coverage increase. By @bigtedde (#1787)</li>
++          <li>Profile sidebar and new setting interface. By @bigtedde (#1809)</li>
++          <li>Update macOS notarization for use with notarytool (#1831)</li>
++        </ul>
++      </description>
++    </release>
+     <release version="v0.9.1-beta3" date="2023-11-30" urgency="low">
+       <description>
+         <ul>
+@@ -56,15 +66,6 @@
+         </ul>
+       </description>
+     </release>
+-    <release version="v0.9.1-beta2" date="2023-10-27" urgency="low">
+-      <description>
+-        <ul>
+-          <li>Unit test improvements and coverage increase. By @bigtedde (#1787)</li>
+-          <li>Profile sidebar and new setting interface. By @bigtedde (#1809)</li>
+-          <li>Update macOS notarization for use with notarytool (#1831)</li>
+-        </ul>
+-      </description>
+-    </release>
+   </releases>
+   <url type="bugtracker">https://github.com/borgbase/vorta/issues</url>
+   <url type="help">https://vorta.borgbase.com/usage/</url>
 -- 
 2.42.0
 
