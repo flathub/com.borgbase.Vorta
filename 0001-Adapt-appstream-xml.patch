@@ -1,0 +1,24 @@
+From 44dba23daff1ce3691c106a6ac7f88b57d97669d Mon Sep 17 00:00:00 2001
+From: Julian Hofer <julianhofer@gnome.org>
+Date: Wed, 10 Jan 2024 19:18:03 +0100
+Subject: [PATCH] Adapt appstream xml
+
+---
+ src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml b/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
+index 24b8785..1c40898 100644
+--- a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
++++ b/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <component type="desktop-application">
+   <id>com.borgbase.Vorta</id>
++  <launchable type="desktop-id">com.borgbase.Vorta.desktop</launchable>
+   <name>Vorta</name>
+   <project_license>GPL-3.0</project_license>
+   <metadata_license>CC0-1.0</metadata_license>
+-- 
+2.42.0
+

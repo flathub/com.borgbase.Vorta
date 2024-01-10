@@ -1,5 +1,5 @@
 {
-    "app-id": "com.borgbase.Vorta",
+    "id": "com.borgbase.Vorta",
     "runtime": "org.kde.Platform",
     "runtime-version": "6.6",
     "sdk": "org.kde.Sdk",
@@ -65,6 +65,10 @@
                         }
                     },
                     "commit": "1d85cb48dcd1b08c1bc9c26b09a85550afeaebcb"
+                },
+                {
+                    "type": "patch",
+                    "path": "0001-Adapt-appstream-xml.patch"
                 }
             ]
         }
