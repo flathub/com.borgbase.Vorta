@@ -11,11 +11,12 @@ diff --git a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml b/src/vort
 index 24b8785..e24277a 100644
 --- a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
 +++ b/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
-@@ -1,6 +1,7 @@
+@@ -1,6 +1,8 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <component type="desktop-application">
    <id>com.borgbase.Vorta</id>
 +  <launchable type="desktop-id">com.borgbase.Vorta.desktop</launchable>
++  <developer_name translatable="no">Vorta developers</developer_name>
    <name>Vorta</name>
    <project_license>GPL-3.0</project_license>
    <metadata_license>CC0-1.0</metadata_license>
