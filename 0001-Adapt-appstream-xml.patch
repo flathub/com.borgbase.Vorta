@@ -11,7 +11,7 @@ diff --git a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml b/src/vort
 index 24b8785..e24277a 100644
 --- a/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
 +++ b/src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml
-@@ -1,6 +1,7 @@
+@@ -1,6 +1,8 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <component type="desktop-application">
    <id>com.borgbase.Vorta</id>
