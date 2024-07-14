@@ -7,13 +7,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/6e/9e/e7a116401ef0c6c2766e4e49e5a3aafaa725ba0ea827305f016339c6c496/borgbackup-1.2.4.tar.gz",
-            "sha256": "a4bd54e9469e81b7a30a6711423115abc818d9cd844ecb1ca0e6104bc5374da8",
+            "url": "https://files.pythonhosted.org/packages/dd/0d/28e60180ce4ae171adba65ce9f8878fce3580c6d2cfdfa998929175105dd/borgbackup-1.4.0.tar.gz",
+            "sha256": "c54c45155643fa66fed7f9ff2d134ea0a58d0ac197c18781ddc2fb236bf6ed29",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "borgbackup",
                 "versions": {
-                    "<": "1.2.5"
+                    "<": "1.4.1"
                 }
             }
         },
