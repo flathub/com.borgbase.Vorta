@@ -66,10 +66,6 @@
                         }
                     },
                     "commit": "6bec467e44796f11fdafed5f3ffcf4f183424dee"
-                },
-                {
-                    "type": "patch",
-                    "path": "0001-Adapt-appstream-xml.patch"
                 }
             ]
         }
