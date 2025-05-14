@@ -20,8 +20,7 @@
             "sha256": "dd432ccc2c72b914e4cb77afce64aab761c1137cc698be3984eee260bcb2896e",
             "x-checker-data": {
                 "type": "pypi",
-                "name": "msgpack",
-                "packagetype": "bdist_wheel"
+                "name": "msgpack"
             }
         },
         {
