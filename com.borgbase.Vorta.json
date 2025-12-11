@@ -47,7 +47,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "make translations-to-qm",
-                "install -D src/vorta/assets/metadata/com.borgbase.Vorta.appdata.xml ${FLATPAK_DEST}/share/metainfo/com.borgbase.Vorta.appdata.xml",
+                "install -D com.borgbase.Vorta.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.borgbase.Vorta.metainfo.xml",
                 "install -D src/vorta/assets/icons/icon.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.borgbase.Vorta.svg",
                 "install -D package/icon-symbolic.svg ${FLATPAK_DEST}/share/icons/hicolor/symbolic/apps/com.borgbase.Vorta-symbolic.svg",
                 "install -D src/vorta/assets/metadata/com.borgbase.Vorta.desktop ${FLATPAK_DEST}/share/applications/com.borgbase.Vorta.desktop",
@@ -63,7 +63,10 @@
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
-
+                },
+                {
+                    "type": "file",
+                    "path": "com.borgbase.Vorta.metainfo.xml"
                 }
             ]
         }
