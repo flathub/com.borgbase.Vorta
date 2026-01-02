@@ -11,13 +11,15 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.17.2/fuse-3.17.2.tar.gz",
-            "sha256": "3d932431ad94e86179e5265cddde1d67aa3bb2fb09a5bd35c641f86f2b5ed06f",
+            "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.18.1/fuse-3.18.1.tar.gz",
+            "sha256": "dd395c88f29c7540bbdd0b830260ab8092ccb241bb6e66f603643f715fb9322c",
             "x-checker-data": {
                 "type": "anitya",
                 "project-id": 861,
                 "stable-only": true,
-                "versions": {"<": "4.0"},
+                "versions": {
+                    "<": "4.0"
+                },
                 "url-template": "https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz"
             }
         }
