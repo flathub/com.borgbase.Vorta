@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/cb/28/3bfe2fa5a7b9c46fe7e13c97bda14c895fb10fa2ebf1d0abb90e0cea7ee1/platformdirs-4.5.1-py3-none-any.whl",
-            "sha256": "d03afa3963c806a9bed9d5125c8f4cb2fdaf74a55ab60e5d59b3fde758104d31",
+            "url": "https://files.pythonhosted.org/packages/70/77/e8c95e95f1d4cdd88c90a96e31980df7e709e51059fac150046ad67fac63/platformdirs-4.9.1-py3-none-any.whl",
+            "sha256": "61d8b967d34791c162d30d60737369cbbd77debad5b981c4bfda1842e71e0d66",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "platformdirs",
