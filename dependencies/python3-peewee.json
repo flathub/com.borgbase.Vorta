@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/9f/09/a3b2a32ce498f405dce4320267e99b1b076c1ea39ad01151a353bc7f81d7/peewee-4.0.6.tar.gz",
-            "sha256": "ea2f78f24ff9e3660281dc5b0be8bc00d9a9514bdc40c98e416fcd042b66ac6a",
+            "url": "https://files.pythonhosted.org/packages/c7/d5/f4ab9d7acead47d6f6efa7764808589386f57969c718035976076eb9d9e3/peewee-4.1.2.tar.gz",
+            "sha256": "eee0fe2fbaa49b36d758c2baeeafd9fd586171ed1256ec91c804f7c1b846af4f",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "peewee"
