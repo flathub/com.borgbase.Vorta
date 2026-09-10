@@ -67,8 +67,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/1c/93/dab25dc87ac48da0fe0f6419e07d0bfd98799bed4e05e7b9e0f85a1a4b4b/trio-0.33.0-py3-none-any.whl",
-            "sha256": "3bd5d87f781d9b0192d592aef28691f8951d6c2e41b7e1da4c25cde6c180ae9b",
+            "url": "https://files.pythonhosted.org/packages/77/1f/555f1364bed52a92a864181962b77f1b15adadeacf23b86105324363e461/trio-0.34.0-py3-none-any.whl",
+            "sha256": "6c7c9f49917694dcdcd5f67abd168df5599eca480d61f29854d17a61a75c2f05",
             "x-checker-data": {
                 "type": "pypi",
                 "name": "trio",
