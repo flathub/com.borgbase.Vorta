@@ -1,0 +1,21 @@
+Relax the PyQt6 minimum version for the Flatpak build.
+
+Vorta 0.12.0 requires pyqt6>=6.12 only to pick up a Qt fix for a macOS 27
+tray crash (borgbase/vorta#2566, commit a93ddab). The Linux code paths do not
+need it, and the newest PyQt BaseApp (6.11) ships PyQt6 6.11.0, so pip would
+otherwise refuse to install Vorta. Drop this patch once a BaseApp with
+PyQt6 >= 6.12 is available.
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 143ea7ed1088..160af004bb7c 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -36,7 +36,7 @@ dependencies = [
+     "pyobjc-framework-Cocoa<13; sys_platform == 'darwin'",
+     "pyobjc-framework-CoreWLAN<13; sys_platform == 'darwin'",
+     "pyobjc-framework-LaunchServices<13; sys_platform == 'darwin'",
+-    "pyqt6>=6.12",
++    "pyqt6",
+     "secretstorage; sys_platform != 'darwin'",
+ ]
+
