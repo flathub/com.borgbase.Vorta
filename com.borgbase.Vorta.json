@@ -57,8 +57,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/borgbase/vorta",
-                    "tag": "v0.12.0",
-                    "commit": "9ec3410034d53e468804f9d217d0840f700a2bd4",
+                    "tag": "v0.12.2",
+                    "commit": "fd73e3d2319da4dae9e9a4912443b573d7a83255",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
